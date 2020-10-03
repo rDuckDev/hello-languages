@@ -1,2 +1,1 @@
-# hello-django
- 
+# Hello Django
