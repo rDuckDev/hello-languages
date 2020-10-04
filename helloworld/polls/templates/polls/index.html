@@ -1,15 +1,21 @@
+{% extends "polls/base.html" %}
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+{% block title %}Home{% endblock %}
+{% block header %}Choose a Question{% endblock %}
 
-<main>
+{% block content %}
     {% if latest_question_list %}
-    <ul>
+    <section class="list-group mb-3">
         {% for question in latest_question_list %}
-        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        <a href="{% url 'polls:detail' question.id %}" class="list-group-item list-group-item-action">
+            {{ question.question_text }}
+        </a>
         {% endfor %}
-    </ul>
+    </section>
     {% else %}
-    <p>No polls are available.</p>
+    <div class="alert alert-secondary">No polls are available.</div>
     {% endif %}
-</main>
+
+    <img alt="mountain lake" src="{% static 'polls/images/background.jpg' %}" class="img-fluid w-100">
+{% endblock %}
