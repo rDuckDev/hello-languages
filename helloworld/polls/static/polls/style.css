@@ -1,0 +1,3 @@
+body { background: white url("images/background.jpg") no-repeat; }
+main { background: white; display: inline-block; padding-right: 30px; }
+li a { color: green; }
