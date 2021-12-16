@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+
+<?php
+# compose the 'Hello World!' message using string concatenation
+$hello = "Hello";
+$world = "World";
+$hello_world = $hello . " " . $world . "!";
+?>
+
 <html lang="en" class="h-100">
 
 <head>
@@ -12,7 +20,7 @@
 
 <body class="h-100 d-flex align-items-center">
     <section class="container-fluid text-center">
-
+        <h1><?php echo $hello_world ?></h1>
     </section>
 </body>
 
