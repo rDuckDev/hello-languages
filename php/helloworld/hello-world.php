@@ -20,6 +20,7 @@ $hello_world = $hello . " " . $world . "!";
 
 <body class="h-100 d-flex align-items-center">
     <section class="container-fluid text-center">
+        <!-- print the 'Hello World!' message -->
         <h1><?php echo $hello_world ?></h1>
     </section>
 </body>
