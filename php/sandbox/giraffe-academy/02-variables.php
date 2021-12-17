@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Mad Libs (Variables)</title>
+    <title>Variables: Mad Libs</title>
 </head>
 
 <body>
