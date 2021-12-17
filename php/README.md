@@ -19,9 +19,10 @@
     extension=pdo_sqlite
     extension=sqlite3
     ```
-  - Start the Apache module
 
 ## Usage
 
+- Open the XAMPP Control Panel
+  - Start the Apache module
 - Open a web browser to [http://localhost/php]( http://localhost:80/php )
 - Navigate to the desired sub-project
