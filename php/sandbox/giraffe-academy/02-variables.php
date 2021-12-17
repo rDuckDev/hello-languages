@@ -13,6 +13,9 @@
 
     echo ("There once was a man named $character_name.<br>");
     echo ("He was $character_age years old.<br>");
+
+    $character_name = "Odie";
+
     echo ("He really liked the name $character_name.<br>");
     echo ("But didn't like being $character_age.");
     ?>
