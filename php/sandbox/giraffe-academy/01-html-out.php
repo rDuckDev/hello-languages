@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Hello World!</title>
+    <title>HTML Output</title>
 </head>
 
 <body>
