@@ -7,9 +7,9 @@
 </head>
 
 <body>
-    <?php
-    echo ("Includes");
-    ?>
+    <?php include "includes/header.htm" ?>
+    <p>The header and footer of this page are both includes.</p>
+    <?php include "includes/footer.htm" ?>
 </body>
 
 </html>
