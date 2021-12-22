@@ -7,17 +7,29 @@ class Book
     public $title;
     public $author;
     public $pages;
+
+    function __construct($arg_title, $arg_author, $arg_pages)
+    {
+        $this->title = $arg_title;
+        $this->author = $arg_author;
+        $this->pages = $arg_pages;
+
+        echo ("$arg_title was added to the library!<br>");
+    }
 }
 
-$library = array(new Book, new Book);
-
-$library[0]->title = "Harry Potter";
-$library[0]->author = "J.K. Rowling";
-$library[0]->pages = 4100;
-
-$library[1]->title = "Lord of the Rings";
-$library[1]->author = "J. R. R. Tolkien";
-$library[1]->pages = 128;
+$library = array(
+    new Book(
+        "Harry Potter",
+        "J.K. Rowling",
+        4100
+    ),
+    new Book(
+        "Lord of the Rings",
+        "J. R. R. Tolkien",
+        128
+    )
+);
 
 ?>
 
