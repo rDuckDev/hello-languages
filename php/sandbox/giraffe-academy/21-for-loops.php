@@ -12,9 +12,9 @@
 
     echo ("<p>Let's count to $term!</p>");
 
-    # count from 1 to 10
+    // count from 1 to 10
     for ($i = 1; $i <= $term; $i++) {
-        # include halves in the count
+        // include halves in the count
         for ($ii = 0; $ii < 10; $ii += 5) {
             echo ("$i.$ii<br>");
         }

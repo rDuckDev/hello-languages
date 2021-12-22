@@ -8,15 +8,15 @@
 
 <body>
     <?php
-    # strings
+    // strings
     $str = "To be or not to be.";
-    # integer
+    // integer
     $int = 35;
-    # float
+    // float
     $flt = 35.3;
-    # boolean
+    // boolean
     $bln = false;
-    # null
+    // null
     $nil = null;
 
     echo ("String: $str<br>");

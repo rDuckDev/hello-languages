@@ -2,11 +2,11 @@
 <html>
 
 <?php
-# assign each parameter its given value, or a default
+// assign each parameter its given value, or a default
 $var_x = isset($_GET["var_x"]) ? $_GET["var_x"] : 0;
 $var_y = isset($_GET["var_y"]) ? $_GET["var_y"] : 0;
 
-# special handling for division by zero
+// special handling for division by zero
 $quot = $var_y == 0
     ? "undefined"
     : $var_x / $var_y

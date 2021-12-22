@@ -25,7 +25,7 @@
         $grade = isset($_POST["grade"]) ? $_POST["grade"] : null;
 
         if (is_null($grade))
-            # early return on no input
+            // early return on no input
             return;
 
         echo ("<hr>");

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 <?php
-# HT: https://stackoverflow.com/questions/65603660/beginner-php-warning-undefined-array-key
-# PHP 8.0+ shows warnings by default; the requested parameters are unset on an
-# initial page load; so, check for parameters and (if necessary) assign defaults
+// HT: https://stackoverflow.com/questions/65603660/beginner-php-warning-undefined-array-key
+// PHP 8.0+ shows warnings by default; the requested parameters are unset on an
+// initial page load; so, check for parameters and (if necessary) assign defaults
 $user_name = isset($_GET["user_name"]) ? $_GET["user_name"] : null;
 $user_age = isset($_GET["user_age"]) ? $_GET["user_age"] : null;
 
-# toggle the output state based on parameter values
+// toggle the output state based on parameter values
 $output_display = (is_null($user_name) || is_null($user_age))
     ? "none"
     : "block";

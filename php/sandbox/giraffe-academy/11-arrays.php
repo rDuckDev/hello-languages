@@ -21,7 +21,7 @@
     $names_array[1] = "Dwight";
     echo ("Value (2): $names_array[1] <br>");
 
-    # note that arrays are not (necessarily) homogenous
+    // note that arrays are not (necessarily) homogenous
     $names_array[1] = 400;
     echo ("Value (2): $names_array[1] <br>");
 

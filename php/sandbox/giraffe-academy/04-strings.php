@@ -8,17 +8,17 @@
 
 <body>
     <?php
-    # print a plaintext string to HTML
+    // print a plaintext string to HTML
     echo ("Literal: rDuckDev");
     echo ("<hr>");
 
-    # print a plaintext string variable to HTML
+    // print a plaintext string variable to HTML
     $brand = "rDuckDev";
     echo ("Variable: $brand");
     echo ("<hr>");
 
-    # print string manipulations
-    # HT: https://plentifun.com/funny-tongue-twisters
+    // print string manipulations
+    // HT: https://plentifun.com/funny-tongue-twisters
     $tongue_twister = "Duck takes licks in lakes Luke Luck likes.";
     echo ("Phrase: $tongue_twister<br>");
     echo ("Upper: " . strtoupper($tongue_twister) . "<br>");

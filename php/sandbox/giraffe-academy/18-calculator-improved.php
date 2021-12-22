@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
 <?php
-# assign each parameter its given value, or a default
+// assign each parameter its given value, or a default
 $var_x = isset($_POST["var_x"]) ? $_POST["var_x"] : null;
 $var_y = isset($_POST["var_y"]) ? $_POST["var_y"] : null;
 $op = isset($_POST["op"]) ? $_POST["op"] : null;
 
-# cache whether input was given
+// cache whether input was given
 $has_input = (bool) !is_null($var_x)
     && !is_null($var_y)
     && !is_null($op);
 
-# calculate the result based on user input
+// calculate the result based on user input
 $res = null;
 if ($op == "+") {
     $res = $var_x + $var_y;
@@ -20,7 +20,7 @@ if ($op == "+") {
 } elseif ($op == "*") {
     $res = $var_x * $var_y;
 } elseif ($op == "/") {
-    # apply special handling for division by zero
+    // apply special handling for division by zero
     $res = $var_y == 0
         ? "undefined"
         : $var_x / $var_y;

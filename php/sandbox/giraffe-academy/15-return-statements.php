@@ -10,8 +10,8 @@ $style = is_null($number)
     ? "display:none"
     : "display:block";
 
-# This function returns the cubed value of a given number.
-# On invalid input, this function returns null.
+// This function returns the cubed value of a given number.
+// On invalid input, this function returns null.
 function cube($value = null)
 {
     if (!is_numeric($value))

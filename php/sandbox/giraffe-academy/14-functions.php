@@ -4,7 +4,7 @@
 
 function print_hello($name = null, $age = null)
 {
-    # assign default values, when necessary
+    // assign default values, when necessary
     $name = is_null($name) ? "User" : $name;
     $age = is_null($age) ? 0 : $age;
 
