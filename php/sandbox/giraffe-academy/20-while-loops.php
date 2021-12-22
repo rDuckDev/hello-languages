@@ -8,7 +8,15 @@
 
 <body>
     <?php
-    echo ("While Loops");
+    $idx = 1;
+    $term = 10;
+
+    echo ("<p>Let's count to $term!</p>");
+
+    while ($idx <= $term) {
+        echo ("$idx<br>");
+        $idx++;
+    }
     ?>
 </body>
 
