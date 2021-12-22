@@ -40,7 +40,7 @@ $class = array(
     <?php foreach ($class as $student) { ?>
         <section>
             <hr>
-            <h1><?= $student->name ?></h1>
+            <h2><?= $student->name ?></h2>
             <h4><?= $student->major ?> Major</h4>
             <p>
                 GPA: <?= $student->gpa ?>
