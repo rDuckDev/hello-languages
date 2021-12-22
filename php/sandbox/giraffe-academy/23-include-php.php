@@ -9,6 +9,11 @@
 <body>
     <?php
     echo ("PHP Includes");
+
+    // $title = "My First Post";
+    // $author = "rDuckDev";
+    // $word_count = 400;
+    include "includes/article-header.php"
     ?>
 </body>
 
