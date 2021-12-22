@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+<?php include "includes/util.php" ?>
+
 <html>
 
 <head>
@@ -15,6 +18,10 @@
     // $word_count = 400;
     include "includes/article-header.php"
     ?>
+    <hr>
+    <h2>Utilities</h2>
+    <p>There are <?= $ft_per_mi ?> ft. per mi.</p>
+    <p><?= print_hello() ?></p>
 </body>
 
 </html>
