@@ -7,5 +7,3 @@ function print_hello($name = null)
     $name = is_null($name) ? "User" : $name;
     echo ("Hello $name!");
 }
-
-?>
