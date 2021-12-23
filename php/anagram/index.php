@@ -14,10 +14,10 @@
     <header>
         <h1>Anagram Generator</h1>
     </header>
-    <form>
+    <form action="index.php" method="POST">
         <label for="word">Enter a word:</label>
-        <input id="word" name="word" type="text" />
-        <button id="submit" name="submit" type="button">Submit</button>
+        <input name="word" type="text">
+        <input type="submit">
     </form>
     <section>
         <h2>Anagrams of {word}:</h2>
