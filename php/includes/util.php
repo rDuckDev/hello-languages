@@ -32,3 +32,28 @@ function get_field_value(string $name): mixed
     // return the assigned value, or null when no value is set
     return $value;
 }
+
+/**
+ * HT: https://www.geeksforgeeks.org/php-program-for-write-a-program-to-print-all-permutations-of-a-given-string/
+ *
+ * This function swaps characters at positions $i and $j of a given string.
+ *
+ * @param string $str The string for which characters are swapped.
+ * @param int $i The first character swap index.
+ * @param int $j The second character swap index.
+ *
+ * @return string A copy of the given string with characters $i and $j swapped.
+ */
+function swap($str, $i, $j)
+{
+    // split the string into its individual characters
+    $str_chars = str_split($str);
+
+    // swap characters $i and $j of the given string
+    $swap_char = $str_chars[$i];
+    $str_chars[$i] = $str_chars[$j];
+    $str_chars[$j] = $swap_char;
+
+    // rejoin the string characters, and return the new string
+    return implode($str_chars);
+}
