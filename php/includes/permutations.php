@@ -15,7 +15,7 @@ class Permutations
      *
      * @param string $word The word for which permutations are generated.
      */
-    function __construct(string $word)
+    function __construct(string|null $word)
     {
         // always initialize the permutations array
         $this->permutations = array();
@@ -32,7 +32,7 @@ class Permutations
      *
      * @return boolean True when permutations are possible, false otherwise.
      */
-    private function is_valid_word(string $word)
+    private function is_valid_word(string|null $word)
     {
         return is_string($word)
             && strlen($word) >= 1;
