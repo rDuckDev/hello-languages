@@ -4,9 +4,16 @@
 
 include "../includes/util.php";
 include "../includes/permutations.php";
+include "../includes/lexicon.php";
 
+// read a value from the word field, if given
 $word = get_field_value("word");
+// generate every unique anagram for the given word
 $anagrams = (new Permutations($word))->get_permutations();
+// generate a lexicon of English words
+$lexicon = (new Lexicon())->get_terms();
+// identify all anagrams that are also English words
+$dictionary_words = array_intersect_assoc($anagrams, $lexicon);
 
 // hide the output section when no word is given
 $output_classes = is_null($word) || empty($word)
@@ -46,9 +53,8 @@ $output_classes = is_null($word) || empty($word)
         </form>
         <section class="my-3 <?= $output_classes ?>">
             <h2>Anagrams of <?= $word ?>:</h2>
-            <!-- TODO: only print dictionary words -->
             <ul class="list-group">
-                <?php foreach ($anagrams as $word => $nil) { ?>
+                <?php foreach ($dictionary_words as $word => $nil) { ?>
                     <li class="list-group-item"><?= $word ?></li>
                 <?php } ?>
             </ul>
