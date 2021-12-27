@@ -1,5 +1,7 @@
 <?php
 
+//! TODO: can this be loaded into memory on PHP startup and (safely) read?
+
 class Lexicon
 {
     private string $dictionary_file;
