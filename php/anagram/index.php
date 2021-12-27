@@ -48,6 +48,10 @@ $output_classes = is_null($word) || empty($word)
                         <input name="word" type="text" value="<?= $word ?>" class="form-control" placeholder="Enter a word to anagram" autofocus>
                         <input type="submit" value="Submit" class="btn btn-primary">
                     </div>
+                    <small class="form-text text-muted">
+                        Hint: want a word with multiple anagrams?
+                        Try entering the word <em>beast</em>.
+                    </small>
                 </div>
             </fieldset>
         </form>
