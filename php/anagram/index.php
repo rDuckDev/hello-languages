@@ -3,8 +3,10 @@
 <?php
 
 include "../includes/util.php";
+include "../includes/permutations.php";
 
 $word = get_field_value("word");
+$anagrams = (new Permutations($word))->get_permutations();
 
 // hide the output section when no word is given
 $output_classes = is_null($word) || empty($word)
@@ -44,7 +46,12 @@ $output_classes = is_null($word) || empty($word)
         </form>
         <section class="my-3 <?= $output_classes ?>">
             <h2>Anagrams of <?= $word ?>:</h2>
-            <!-- TODO: list all anagrams -->
+            <!-- TODO: only print dictionary words -->
+            <ul class="list-group">
+                <?php foreach ($anagrams as $word => $nil) { ?>
+                    <li class="list-group-item"><?= $word ?></li>
+                <?php } ?>
+            </ul>
         </section>
     </section>
 </body>
