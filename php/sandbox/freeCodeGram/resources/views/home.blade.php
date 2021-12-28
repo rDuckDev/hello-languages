@@ -21,9 +21,12 @@
             </section>
         </section>
         <section class="row my-5">
-            <section class="col-4 p-2"><img src="https://picsum.photos/300/300" alt="image" class="img-fluid w-100"></section>
-            <section class="col-4 p-2"><img src="https://picsum.photos/301/301" alt="image" class="img-fluid w-100"></section>
-            <section class="col-4 p-2"><img src="https://picsum.photos/302/302" alt="image" class="img-fluid w-100"></section>
+            <section class="col-4 p-2"><img src="https://picsum.photos/300/300" alt="image" class="img-fluid w-100">
+            </section>
+            <section class="col-4 p-2"><img src="https://picsum.photos/301/301" alt="image" class="img-fluid w-100">
+            </section>
+            <section class="col-4 p-2"><img src="https://picsum.photos/302/302" alt="image" class="img-fluid w-100">
+            </section>
         </section>
     </section>
 @endsection
