@@ -9,7 +9,9 @@
                 </section>
             </section>
             <section class="col-9">
-                <h1>{{ $user->username }}</h1>
+                <section class="d-flex justify-content-between align-items-baseline">
+                    <h1>{{ $user->username }}</h1>
+                </section>
                 <section class="d-flex my-4">
                     <section class="me-4"><span class="fw-bold">153</span> posts</section>
                     <section class="me-4"><span class="fw-bold">23k</span> followers</section>
@@ -17,7 +19,7 @@
                 </section>
                 <h2 class="fs-6 fw-bold">{{ $user->profile->title }}</h2>
                 <p class="my-1">{{ $user->profile->description }}</p>
-                <a href="#">{{ $user->profile->url  }}</a>
+                <a href="#">{{ $user->profile->url }}</a>
             </section>
         </section>
         <section class="row my-5">
