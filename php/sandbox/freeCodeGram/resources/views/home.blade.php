@@ -9,18 +9,15 @@
                 </section>
             </section>
             <section class="col-9">
-                <h1>freeCodeCamp</h1>
+                <h1>{{ $user->username }}</h1>
                 <section class="d-flex my-4">
                     <section class="me-4"><span class="fw-bold">153</span> posts</section>
                     <section class="me-4"><span class="fw-bold">23k</span> followers</section>
                     <section class="me-4"><span class="fw-bold">212</span> following</section>
                 </section>
-                <h2 class="fs-6">freeCodeCamp.org</h2>
-                <p class="my-1">
-                    We're a global community of millions of people learning to code together.<br>
-                    LearnToCodeRPG: https://www.freecodecamp.org/news/learn-to-code-rpg/
-                </p>
-                <a href="https://www.freecodecamp.org">www.freecodecamp.org</a>
+                <h2 class="fs-6 fw-bold">{{ $user->profile->title }}</h2>
+                <p class="my-1">{{ $user->profile->description }}</p>
+                <a href="#">{{ $user->profile->url  }}</a>
             </section>
         </section>
         <section class="row my-5">
