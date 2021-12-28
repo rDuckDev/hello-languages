@@ -22,7 +22,7 @@ class Permutations
 
         if ($this->is_valid_word($word))
             // find all permutations of the given word, if possible
-            $this->permute($word, 0, strlen($word) - 1);
+            $this->permute(strtolower($word), 0, strlen($word) - 1);
     }
 
     /**
