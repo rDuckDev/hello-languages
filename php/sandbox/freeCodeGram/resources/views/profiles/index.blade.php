@@ -11,6 +11,7 @@
             <section class="col-9">
                 <section class="d-flex justify-content-between align-items-baseline">
                     <h1>{{ $user->username }}</h1>
+                    <a href="#">Add new post</a>
                 </section>
                 <section class="d-flex my-4">
                     <section class="me-4"><span class="fw-bold">153</span> posts</section>
