@@ -11,7 +11,7 @@
             <section class="col-9">
                 <section class="d-flex justify-content-between align-items-baseline">
                     <h1>{{ $user->username }}</h1>
-                    <a href="{{ route('post.create') }}">Add new post</a>
+                    <a href="{{ route('post.create') }}">Add post</a>
                 </section>
                 <section class="d-flex my-4">
                     <section class="me-4">
