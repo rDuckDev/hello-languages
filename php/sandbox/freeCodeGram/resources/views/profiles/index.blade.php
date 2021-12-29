@@ -5,8 +5,7 @@
         <section class="row my-5">
             <section class="col-3">
                 <section class="px-5">
-                    <img src="{{ $user->profile->image ? '/storage/' . $user->profile->image : 'https://picsum.photos/200/200' }}"
-                        alt="logo" class="rounded-circle img-fluid">
+                    <img src="{{ $user->profile->profile_image() }}" alt="logo" class="rounded-circle img-fluid">
                 </section>
             </section>
             <section class="col-9">

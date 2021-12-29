@@ -8,9 +8,9 @@
             </section>
             <section class="col-4">
                 <section class="d-flex align-items-center">
-                    <img src="/storage/{{ $post->user->profile->image }}" alt="logo"
-                        class="w-100 img-fluid rouded-circle me-3" style="max-width:40px;">
-                    <h1 class="h5 fw-bold">
+                    <img src="{{ $post->user->profile->profile_image() }}" alt="logo"
+                        class="w-100 img-fluid rounded-circle me-3" style="max-width:40px;">
+                    <h1 class="h5 fw-bold my-0 me-3">
                         <a href="{{ route('profile.show', $post->user->id) }}" class="text-decoration-none text-reset">
                             {{ $post->user->username }}
                         </a>
