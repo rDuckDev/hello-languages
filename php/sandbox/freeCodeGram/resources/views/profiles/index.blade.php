@@ -28,7 +28,9 @@
         <section class="row my-5">
             @foreach ($user->posts as $post)
                 <section class="col-4 p-2">
-                    <img src="/storage/{{ $post->image }}" alt="{{ $post->caption }}" class="img-fluid w-100">
+                    <a href="/post/{{ $post->id }}">
+                        <img src="/storage/{{ $post->image }}" alt="{{ $post->caption }}" class="img-fluid w-100">
+                    </a>
                 </section>
             @endforeach
         </section>
