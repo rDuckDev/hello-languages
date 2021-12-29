@@ -23,9 +23,9 @@
                     <section class="me-4"><span class="fw-bold">23k</span> followers</section>
                     <section class="me-4"><span class="fw-bold">212</span> following</section>
                 </section>
-                <h2 class="fs-6 fw-bold">{{ $user->profile->title }}</h2>
-                <p class="my-1">{{ $user->profile->description }}</p>
-                <a href="#">{{ $user->profile->url }}</a>
+                <h2 class="fs-6 fw-bold">{{ $user->profile->title ?? '' }}</h2>
+                <p class="my-1">{{ $user->profile->description ?? '' }}</p>
+                <a href="#">{{ $user->profile->url ?? '' }}</a>
             </section>
         </section>
         <section class="row my-5">
