@@ -14,7 +14,9 @@
                     <a href="{{ route('post.create') }}">Add new post</a>
                 </section>
                 <section class="d-flex my-4">
-                    <section class="me-4"><span class="fw-bold">153</span> posts</section>
+                    <section class="me-4">
+                        <span class="fw-bold">{{ $user->posts->count() }}</span> posts
+                    </section>
                     <section class="me-4"><span class="fw-bold">23k</span> followers</section>
                     <section class="me-4"><span class="fw-bold">212</span> following</section>
                 </section>
