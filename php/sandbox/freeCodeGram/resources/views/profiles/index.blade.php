@@ -11,7 +11,7 @@
             <section class="col-9">
                 <section class="d-flex justify-content-between align-items-baseline">
                     <h1>{{ $user->username }}</h1>
-                    <a href="#">Add new post</a>
+                    <a href="{{ route('post.create') }}">Add new post</a>
                 </section>
                 <section class="d-flex my-4">
                     <section class="me-4"><span class="fw-bold">153</span> posts</section>
@@ -24,12 +24,11 @@
             </section>
         </section>
         <section class="row my-5">
-            <section class="col-4 p-2"><img src="https://picsum.photos/300/300" alt="image" class="img-fluid w-100">
-            </section>
-            <section class="col-4 p-2"><img src="https://picsum.photos/301/301" alt="image" class="img-fluid w-100">
-            </section>
-            <section class="col-4 p-2"><img src="https://picsum.photos/302/302" alt="image" class="img-fluid w-100">
-            </section>
+            @foreach ($user->posts as $post)
+                <section class="col-4 p-2">
+                    <img src="/storage/{{ $post->image }}" alt="{{ $post->caption }}" class="img-fluid w-100">
+                </section>
+            @endforeach
         </section>
     </section>
 @endsection
