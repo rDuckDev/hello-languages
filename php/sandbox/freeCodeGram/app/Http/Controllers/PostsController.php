@@ -28,7 +28,7 @@ class PostsController extends Controller
         $image = Image::make(public_path("storage/$image_path"))->fit(1200, 1200);
         $image->save();
 
-        // posts can only be saved to the authenticated user
+        // posts can only be saved under the authenticated user
         auth()->user()->posts()->create([
             'caption' => $data['caption'],
             'image' => $image_path

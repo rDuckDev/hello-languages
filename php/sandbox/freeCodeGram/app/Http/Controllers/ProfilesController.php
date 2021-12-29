@@ -31,7 +31,8 @@ class ProfilesController extends Controller
             'url' => 'url'
         ]);
 
-        $user->profile->update($data);
+        // profile changes can only be applied under the authenticated user
+        auth()->user()->profile()->update($data);
 
         return redirect(route('profile.show', $user->id));
     }
