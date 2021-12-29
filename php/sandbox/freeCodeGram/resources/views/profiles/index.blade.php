@@ -13,8 +13,8 @@
                     <h1 class="flex-grow-1">{{ $user->username }}</h1>
                     @can('update', $user->profile)
                         <a href="{{ route('profile.edit', $user->id) }}" class="me-3">Edit profile</a>
+                        <a href="{{ route('post.create') }}">Add post</a>
                     @endcan
-                    <a href="{{ route('post.create') }}">Add post</a>
                 </section>
                 <section class="d-flex my-4">
                     <section class="me-4">
