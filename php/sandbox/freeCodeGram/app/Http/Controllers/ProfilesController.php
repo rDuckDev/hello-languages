@@ -41,12 +41,13 @@ class ProfilesController extends Controller
             $image_path = request('image')->store('profile', 'public');
             $image = Image::make(public_path("storage/$image_path"))->fit(1000, 1000);
             $image->save();
+            $image_data = ['image' => $image_path];
         }
 
         // profile changes can only be applied under the authenticated user
         auth()->user()->profile()->update(array_merge(
             $data,
-            ['image' => ($image_path ?? '')]
+            $image_data ?? []
         ));
 
         return redirect(route('profile.show', $user->id));
