@@ -11,7 +11,9 @@
             <section class="col-9">
                 <section class="d-flex align-items-baseline">
                     <h1 class="flex-grow-1">{{ $user->username }}</h1>
-                    <a href="{{ route('profile.edit', $user->id) }}" class="me-3">Edit profile</a>
+                    @can('update', $user->profile)
+                        <a href="{{ route('profile.edit', $user->id) }}" class="me-3">Edit profile</a>
+                    @endcan
                     <a href="{{ route('post.create') }}">Add post</a>
                 </section>
                 <section class="d-flex my-4">
