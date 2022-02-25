@@ -1,0 +1,21 @@
+{% extends "polls/base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+{% block header %}Choose a Question{% endblock %}
+
+{% block content %}
+    {% if latest_question_list %}
+    <section class="list-group mb-3">
+        {% for question in latest_question_list %}
+        <a href="{% url 'polls:detail' question.id %}" class="list-group-item list-group-item-action">
+            {{ question.question_text }}
+        </a>
+        {% endfor %}
+    </section>
+    {% else %}
+    <div class="alert alert-secondary">No polls are available.</div>
+    {% endif %}
+
+    <img alt="mountain lake" src="{% static 'polls/images/background.jpg' %}" class="img-fluid w-100">
+{% endblock %}
