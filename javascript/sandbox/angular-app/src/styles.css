@@ -26,4 +26,5 @@ input[type="text"],
 button {
   color: #333;
   font-family: Cambria, Georgia, serif;
+  border: none;
 }
