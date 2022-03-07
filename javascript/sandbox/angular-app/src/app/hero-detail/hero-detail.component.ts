@@ -1,8 +1,8 @@
 import { Location } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HeroService } from '../heroes/hero.service';
 import { Hero } from '../interfaces/hero';
+import { HeroService } from '../services/hero.service';
 
 @Component({
   selector: 'app-hero-detail',
