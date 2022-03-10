@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { GalleryPhoto } from '../interfaces/gallery-photo.interface';
@@ -8,7 +9,7 @@ import { GalleryPhoto } from '../interfaces/gallery-photo.interface';
 export class PhotoService {
   public photos: GalleryPhoto[] = [];
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   public async addGalleryPhoto() {
     const photo = await Camera.getPhoto({
