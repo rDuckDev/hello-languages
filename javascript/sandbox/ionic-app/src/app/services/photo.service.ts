@@ -25,22 +25,6 @@ export class PhotoService {
     this.platform = platform;
   }
 
-  public async addGalleryPhoto() {
-    const photo = await Camera.getPhoto({
-      resultType: CameraResultType.Uri,
-      source: CameraSource.Camera,
-      quality: 100,
-    });
-
-    const image: GalleryPhoto = await this.saveGalleryPhoto(photo);
-    this.photos.unshift(image);
-
-    Storage.set({
-      key: this.keyPhotoStore,
-      value: JSON.stringify(this.photos),
-    });
-  }
-
   public async loadGalleryPhotos() {
     const gallery = await Storage.get({ key: this.keyPhotoStore });
     this.photos = JSON.parse(gallery.value) || [];
@@ -56,6 +40,22 @@ export class PhotoService {
         photo.webviewPath = `data:image/jpeg;base64,${file.data}`;
       }
     }
+  }
+
+  public async addGalleryPhoto() {
+    const photo = await Camera.getPhoto({
+      resultType: CameraResultType.Uri,
+      source: CameraSource.Camera,
+      quality: 100,
+    });
+
+    const image: GalleryPhoto = await this.saveGalleryPhoto(photo);
+    this.photos.unshift(image);
+
+    Storage.set({
+      key: this.keyPhotoStore,
+      value: JSON.stringify(this.photos),
+    });
   }
 
   private async saveGalleryPhoto(photo: Photo): Promise<GalleryPhoto> {
