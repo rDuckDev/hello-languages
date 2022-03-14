@@ -49,9 +49,11 @@ export class PhotoService {
       quality: 100,
     });
 
+    // save the photo
     const image: GalleryPhoto = await this.saveGalleryPhoto(photo);
-    this.photos.unshift(image);
 
+    // add the photo to the image gallery
+    this.photos.unshift(image);
     Storage.set({
       key: this.keyPhotoStore,
       value: JSON.stringify(this.photos),
