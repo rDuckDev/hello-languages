@@ -58,6 +58,21 @@ export class PhotoService {
     });
   }
 
+  public async removeGalleryPhoto(photo: GalleryPhoto, position: number) {
+    // remove the photo from the image gallery
+    this.photos.splice(position, 1);
+    Storage.set({
+      key: this.keyPhotoStore,
+      value: JSON.stringify(this.photos),
+    });
+
+    // delete the photo
+    await Filesystem.deleteFile({
+      path: photo.filepath.substring(photo.filepath.lastIndexOf('/') + 1),
+      directory: Directory.Data,
+    });
+  }
+
   private async saveGalleryPhoto(photo: Photo): Promise<GalleryPhoto> {
     // write the photo to the data directory
     const filename = `${uuid()}.jpg`;
