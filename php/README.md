@@ -26,6 +26,7 @@
     ```ini
     extension=pdo_sqlite
     extension=sqlite3
+    extension=gd
     ```
 
 ## Usage
