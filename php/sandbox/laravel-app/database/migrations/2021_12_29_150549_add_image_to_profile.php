@@ -14,7 +14,7 @@ class AddImageToProfile extends Migration
     public function up()
     {
         Schema::table('profiles', function (Blueprint $table) {
-            $table->string('image')->default('image');
+            $table->string('image')->default('');
         });
     }
 
