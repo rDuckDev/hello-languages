@@ -21,13 +21,13 @@
                 </section>
                 <section class="d-flex my-4">
                     <section class="me-4">
-                        <span class="fw-bold">{{ $user->posts->count() }}</span> posts
+                        <span class="fw-bold">{{ $post_count }}</span> posts
                     </section>
                     <section class="me-4">
-                        <span class="fw-bold">{{ $user->profile->followers->count() }}</span> followers
+                        <span class="fw-bold">{{ $followers_count }}</span> followers
                     </section>
                     <section class="me-4">
-                        <span class="fw-bold">{{ $user->following->count() }}</span> following
+                        <span class="fw-bold">{{ $following_count }}</span> following
                     </section>
                 </section>
                 <h2 class="fs-6 fw-bold">{{ $user->profile->title ?? '' }}</h2>
