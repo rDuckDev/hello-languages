@@ -1,5 +1,5 @@
 <template>
-    <button class="btn btn-primary" @click="followUser" v-text="buttonText" />
+    <button class="btn btn-primary btn-sm" @click="followUser" v-text="buttonText" />
 </template>
 
 <script>

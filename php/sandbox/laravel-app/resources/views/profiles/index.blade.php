@@ -10,7 +10,7 @@
             </section>
             <section class="col-9">
                 <section class="d-flex align-items-center mb-3">
-                    <h1 class="me-3">{{ $user->username }}</h1>
+                    <h1 class="me-3 mb-0">{{ $user->username }}</h1>
                     <span class="me-auto">
                         <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
                     </span>
