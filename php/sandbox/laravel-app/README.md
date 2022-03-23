@@ -18,6 +18,8 @@
   php artisan key:generate
   REM migrate the database
   php artisan migrate
+  REM configure runtime storage
+  php artisan storage:link
   ```
 
 ## Usage
