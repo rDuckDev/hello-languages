@@ -9,8 +9,11 @@
                 </section>
             </section>
             <section class="col-9">
-                <section class="d-flex align-items-baseline">
-                    <h1 class="flex-grow-1">{{ $user->username }}</h1>
+                <section class="d-flex align-items-center mb-3">
+                    <h1 class="me-3">{{ $user->username }}</h1>
+                    <span class="me-auto">
+                        <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
+                    </span>
                     @can('update', $user->profile)
                         <a href="{{ route('profile.edit', $user->id) }}" class="me-3">Edit profile</a>
                         <a href="{{ route('post.create') }}">Add post</a>
