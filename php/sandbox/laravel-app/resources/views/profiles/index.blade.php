@@ -23,8 +23,12 @@
                     <section class="me-4">
                         <span class="fw-bold">{{ $user->posts->count() }}</span> posts
                     </section>
-                    <section class="me-4"><span class="fw-bold">23k</span> followers</section>
-                    <section class="me-4"><span class="fw-bold">212</span> following</section>
+                    <section class="me-4">
+                        <span class="fw-bold">{{ $user->profile->followers->count() }}</span> followers
+                    </section>
+                    <section class="me-4">
+                        <span class="fw-bold">{{ $user->following->count() }}</span> following
+                    </section>
                 </section>
                 <h2 class="fs-6 fw-bold">{{ $user->profile->title ?? '' }}</h2>
                 <p class="my-1">{{ $user->profile->description ?? '' }}</p>
