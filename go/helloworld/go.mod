@@ -1,4 +1,4 @@
-module example/helloworld
+module example.com/helloworld
 
 go 1.19
 
