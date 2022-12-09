@@ -10,10 +10,8 @@ import (
 
 const dictionaryPath string = "dictionary.txt"
 
-func buildDictionary() map[string]struct{} {
-	// HT: https://stackoverflow.com/a/34020023
-	// create an empty "set" of dictionary terms
-	dictionary := make(map[string]struct{})
+func buildDictionary() *Trie {
+	dictionary := NewTrie()
 
 	// attempt to open the dictionary file
 	file, err := os.Open(dictionaryPath)
@@ -28,7 +26,7 @@ func buildDictionary() map[string]struct{} {
 	// TODO: better error handling; as-is, an error can produce an empty/incomplete dictionary
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
-		dictionary[scanner.Text()] = struct{}{}
+		dictionary.Insert(scanner.Text())
 	}
 
 	return dictionary
@@ -61,29 +59,26 @@ func producePermutations(chars []rune, index int, length int, ch chan<- string) 
 	}
 }
 
-func filterPermutations(dictionary map[string]struct{}, ch <-chan string) []string {
-	permutations := make(map[string]bool)
+func filterPermutations(dictionary *Trie, ch <-chan string) []string {
+	matches := make(map[string]struct{})
 	anagrams := []string{}
 
 	for {
 		// as each permutation is produced . . .
-		candidate, isOpen := <-ch
-		if isOpen {
-			// save it, and mark whether it's present in the dictionary
-			_, isPresent := dictionary[candidate]
-			permutations[candidate] = isPresent
+		if text, ok := <-ch; ok {
+			// check for any anagrams (including substrings)
+			for _, match := range dictionary.FindAll(text, 3) {
+				matches[match] = struct{}{}
+			}
 			continue
 		}
 		break
 	}
 
-	// after processing all permutations, filter out invalid words . . .
-	for candidate, isWord := range permutations {
-		if isWord {
-			anagrams = append(anagrams, candidate)
-		}
+	// after processing all permutations, return a list of anagrams
+	for word := range matches {
+		anagrams = append(anagrams, word)
 	}
-	// and return all valid anagrams
 	return anagrams
 }
 
